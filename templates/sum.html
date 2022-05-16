@@ -1,0 +1,29 @@
+{%extends "base.html"%}
+{%block title%} Sum{% endblock %}
+
+{%block content%} 
+<h2>This is Sum Page</h2>
+{% with messages = get_flashed_messages()%}
+    {%if messages %}
+        {%for m in messages%}
+            <p>{{m}}</p>
+        {% endfor %}
+    {% endif %}
+{% endwith %}   
+<div style ="margin-left :50px" > 
+    <form action="#" method="post">
+        <label for ="">Name </label>
+        <input type="text" name="name"></input>
+        <button style="background-color : #000; color:red;" type="submit">Login</button>
+        <label for ="">b </label>
+        <input type="text" name="b"></input>
+
+    </form>
+</div>
+
+
+
+
+
+{% endblock %}
+
